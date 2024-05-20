@@ -7,10 +7,4 @@ import kotlinx.coroutines.launch
 
 class ContainerViewModel: ViewModel() {
     val refreshHome: MutableSharedFlow<Unit> = MutableSharedFlow()
-
-    fun refreshHome() {
-        viewModelScope.launch {
-            refreshHome.emit(Unit)
-        }
-    }
 }

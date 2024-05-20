@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
-import com.example.project.core.Constants
 import com.example.project.databinding.FragmentContainerBinding
 import com.example.project.ui.adapter.ContainerAdapter
 import com.example.project.ui.completed.CompletedFragment
@@ -42,14 +40,6 @@ class ContainerFragment : Fragment() {
             }
         }.attach()
 
-        setFragmentResultListener(Constants.ADD_TASK_FRAGMENT) { _, result ->
-
-            //gets boolean value from result
-            val refresh = result.getBoolean(Constants.REFRESH, true)
-
-            //if refresh is true, fetch all words
-            if (refresh)  viewModel.refreshHome()
-        }
     }
 
 }

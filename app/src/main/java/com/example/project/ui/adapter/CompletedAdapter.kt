@@ -41,7 +41,6 @@ class CompletedAdapter(private var tasks: List<Task>
         fun bind(task: Task) {
             binding.task = task
             binding.cvWorks.setOnClickListener {
-                Log.d("debugging" ,"test")
                 listener?.onClick(task)
             }
         }

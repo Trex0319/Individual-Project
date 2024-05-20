@@ -118,8 +118,8 @@
 
         <TextView
             android:id="@+id/tvS"
-            android:layout_width="69dp"
-            android:layout_height="29dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/synonyms"
             android:textAlignment="textStart"
             android:textSize="@dimen/m"
