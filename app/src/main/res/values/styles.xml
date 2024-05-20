@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Project.EditText" parent="">
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:paddingHorizontal">@dimen/s</item>
+        <item name="android:paddingVertical">@dimen/xxxs</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
+    <style name="NavComp.TextView.Small" parent="">
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
+    <style name="NavComp.TextView.Title" parent="">
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NavComp.TextView.Content" parent="">
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+</resources>

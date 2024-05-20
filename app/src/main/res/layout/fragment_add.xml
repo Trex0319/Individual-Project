@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.project.ui.addBook.AddViewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/l"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ui.addBook.AddFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/add_new_task"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/title" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xs"
+        style="@style/Project.EditText"
+        android:text="@={viewModel.title}"
+        android:hint="@string/title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/meaning" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xs"
+        style="@style/Project.EditText"
+        android:text="@={viewModel.mean}"
+        android:hint="@string/meaning" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/synonyms" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xs"
+        style="@style/Project.EditText"
+        android:text="@={viewModel.syn}"
+        android:hint="@string/synonyms" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xl"
+        android:text="@string/details" />
+
+    <EditText
+        style="@style/Project.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xs"
+        android:gravity="start"
+        android:text="@={viewModel.detail}"
+        android:hint="@string/details"
+        android:minLines="5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbSubmit"
+        android:backgroundTint="@color/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:layout_marginTop="@dimen/xxm"
+        android:onClick="@{() -> viewModel.submit()}"/>
+</LinearLayout>
+</layout>

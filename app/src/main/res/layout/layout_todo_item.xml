@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="task"
+            type="com.example.project.data.model.Task" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/mcItem"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/xxxxs"
+        app:cardCornerRadius="@dimen/xxxs"
+        app:cardElevation="@dimen/xxxxxs">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/NavComp.TextView.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/app_name"
+                android:text="@{task.title}" />
+
+            <TextView
+                style="@style/NavComp.TextView.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxxs"
+                android:hint="@string/app_name"
+                android:text="@{task.detail}" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

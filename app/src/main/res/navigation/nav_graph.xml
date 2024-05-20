@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/containerFragment">
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.project.ui.addBook.AddFragment"
+        android:label="AddFragment" >
+            <action
+                android:id="@+id/action_addFragment_to_containerFragment"
+                app:destination="@id/containerFragment" />
+            <action
+                android:id="@+id/action_addFragment_to_containerFragment2"
+                app:destination="@id/containerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/updateFragment"
+            android:name="com.example.project.ui.updateTask.UpdateFragment"
+            android:label="UpdateDeleteFragment">
+            <argument
+                android:name="id"
+                app:argType="integer" />
+            <action
+                android:id="@+id/action_updateFragment_to_containerFragment"
+                app:destination="@id/containerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/itemFragment"
+            android:name="com.example.project.ui.selectedItem.SelectedItemFragment"
+            android:label="ItemFragment">
+            <argument
+                android:name="id"
+                app:argType="integer" />
+            <action
+                android:id="@+id/action_itemFragment_to_updateFragment"
+                app:destination="@id/updateFragment" >
+                <argument
+                    android:name="id"
+                    app:argType="integer" />
+            </action>
+            <action
+                android:id="@+id/action_itemFragment_to_containerFragment"
+                app:destination="@id/containerFragment" />
+            <action
+                android:id="@+id/action_itemFragment_to_containerFragment2"
+                app:destination="@id/containerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/containerFragment"
+            android:name="com.example.project.ui.container.ContainerFragment"
+            android:label="ContainerFragment"
+            tools:layout="@layout/fragment_container">
+            <action
+                android:id="@+id/action_containerFragment_to_itemFragment"
+                app:destination="@id/itemFragment" />
+            <action
+                android:id="@+id/action_containerFragment_to_addFragment"
+                app:destination="@id/addFragment" />
+        </fragment>
+
+    </navigation>
